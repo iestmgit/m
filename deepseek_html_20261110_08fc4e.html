@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پخش و دانلود ویدیوها</title>
+
+<!-- فونت وزیرمتن -->
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    color: #fff;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .card h2 {
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #9fd3ff;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  video {
+    width: 100%;
+    border-radius: 12px;
+    background: #000;
+    display: block;
+    margin-bottom: 15px;
+    outline: none;
+  }
+
+  .btn-download {
+    font-family: 'Vazirmatn', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: #0a1a2f;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: filter 0.25s ease, transform 0.15s ease;
+  }
+
+  .btn-download:hover {
+    filter: brightness(1.1);
+  }
+
+  .btn-download:active {
+    transform: scale(0.97);
+  }
+
+  .btn-download svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ویدیو 1080p -->
+  <div class="card">
+    <h2>کیفیت 1080p</h2>
+    <video controls preload="metadata">
+      <source src="12f6bf184b1339bbe613a2d5a06d13cf72149373-1080p.mp4" type="video/mp4">
+      مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+    </video>
+    <a class="btn-download" href="12f6bf184b1339bbe613a2d5a06d13cf72149373-1080p.mp4" download>
+      <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM12 2v12.5l4.5-4.5 1.4 1.4L12 17.3 6.1 11.4 7.5 10l4.5 4.5V2h0z"/></svg>
+      دانلود 1080p
+    </a>
+  </div>
+
+  <!-- ویدیو 360p -->
+  <div class="card">
+    <h2>کیفیت 360p</h2>
+    <video controls preload="metadata">
+      <source src="b37191dc748d73443d7b39e960d3372e39870489-360p.mp4" type="video/mp4">
+      مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+    </video>
+    <a class="btn-download" href="b37191dc748d73443d7b39e960d3372e39870489-360p.mp4" download>
+      <svg viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM12 2v12.5l4.5-4.5 1.4 1.4L12 17.3 6.1 11.4 7.5 10l4.5 4.5V2h0z"/></svg>
+      دانلود 360p
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
